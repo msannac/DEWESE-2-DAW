@@ -1,0 +1,22 @@
+body {
+    background-color: #f0f8ff;
+    color: #333;
+}
+header {
+    background-color: #4682b4;
+    color: white;
+    padding: 20px 0;
+}
+footer {
+    background-color: #4682b4;
+    color: white;
+    padding: 10px 0;
+}
+/* Estilo para el banner */
+.banner {
+    width: 30cm; /* Ancho del banner */
+    height: 5cm; /* Altura del banner */
+    object-fit: cover; /* Asegura que la imagen se ajuste al tamaño del contenedor */
+    display: block; /* Hace que la imagen se comporte como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
