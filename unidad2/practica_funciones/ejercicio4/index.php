@@ -61,9 +61,11 @@
 </body>
 </html>
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require_once './lib/funciones.php';
+// Incluimos el archivo de funciones
+require_once './lib/funciones.php';
 
+// Verificamos si el formulario ha sido enviado, usando isset
+if (isset($_POST['limite'])) {
     // Recoger datos del formulario
     $limite = (int) $_POST['limite'];
     $mediaCheckbox = isset($_POST['media']);
