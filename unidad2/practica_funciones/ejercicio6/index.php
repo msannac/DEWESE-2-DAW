@@ -18,7 +18,7 @@
 include 'funciones.php';
 
 // Verificamos si el formulario ha sido enviado
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['numeros'])) {
     // Obtenemos el texto ingresado de números
     $textoNumeros = $_POST['numeros'];
     
