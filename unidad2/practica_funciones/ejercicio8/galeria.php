@@ -11,7 +11,7 @@
 function crearGaleria($texto) {
     // Divide el texto en líneas
     $lineas = explode("\n", trim($texto)); 
-    // Configuración de la galería (márgenes y columnas)
+    // Configuración demárgenes y columnas de la galería
     $configuracion = explode("-", trim($lineas[0])); 
 
     // Configuración de la galería
@@ -72,7 +72,7 @@ function crearGaleria($texto) {
 }
 
 // Mostrar la galería cuando el formulario se envía
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['codigo_galeria'])) {
     $codigoGaleria = $_POST['codigo_galeria'];
     echo crearGaleria($codigoGaleria);
 }

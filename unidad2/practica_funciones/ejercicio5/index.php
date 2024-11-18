@@ -17,8 +17,8 @@
 // Incluimos las funciones del archivo `funciones.php`
 include 'funciones.php';
 
-// Verificamos si el formulario ha sido enviado
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+// Verificamos si el formulario ha sido enviado comprobando la existencia de la clave 'nombre' en $_POST
+if (isset($_POST['nombre'])) {
     // Obtenemos el nombre ingresado y lo limpiamos de espacios innecesarios
     $nombre = $_POST['nombre'];
     
