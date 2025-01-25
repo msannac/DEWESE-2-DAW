@@ -1,0 +1,21 @@
+{
+    "name": "pmpin/unidad3",
+    "autoload": {
+        "psr-4": {
+            "Pmpin\\Unidad3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "msannac",
+            "email": "msannac783@g.educaand.es"
+        }
+    ],
+    "require": {
+        "fakerphp/faker": "^1.24",
+        "graham-campbell/result-type": "^1.1",
+        "kint-php/kint": "^6.0",
+        "nikic/fast-route": "^1.3",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
