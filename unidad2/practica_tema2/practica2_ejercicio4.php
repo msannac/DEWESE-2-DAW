@@ -44,8 +44,8 @@ if ($jugador1[0] == 'cara' && $jugador1[1] == 'cara') {
 }
 // Mostrar los resultados
 // Incluir imágenes de cara y cruz
-$cara = "<img src='/DES/unidad2/practica_tema2/monedas/cara.jpg' alt='cara'>";
-$cruz = "<img src='/DES/unidad2/practica_tema2/monedas/cruz.jpg' alt='cruz'>";
+$cara = "<img src='/DEWESE-2-DAW/unidad2/practica_tema2/monedas/cara.jpg' alt='cara'>";
+$cruz = "<img src='/DEWESE-2-DAW/unidad2/practica_tema2/monedas/cruz.jpg' alt='cruz'>";
 // Mostrar los resultados
 echo "<h3>Resultados de la tirada:</h3>";
 echo "<p>Jugador 1: " . ($jugador1[0] == 'cara' ? $cara : $cruz) . ", " . ($jugador1[1] == 'cara' ? $cara : $cruz) . "</p>";

@@ -49,3 +49,4 @@ function calcularStockPorProvincia($almacenes) {
     return $stockPorProvincia;
 }
 ?>
+

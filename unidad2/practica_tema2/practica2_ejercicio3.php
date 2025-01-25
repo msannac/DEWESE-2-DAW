@@ -21,9 +21,9 @@ $palo2 = (rand(1, 4) == 1) ? "corazones" : ((rand(1, 4) == 2) ? "diamantes" : ((
 
 // Mostrar las imágenes de las cartas
 echo "<h3>Primera carta:</h3>";
-echo "<img src='/DES/unidad2/practica_tema2/PNG-cards-1.3/{$nombreValor1}_{$palo1}.png' alt='{$nombreValor1} de {$palo1}' />";
+echo "<img src='/DEWESE-2-DAW/unidad2/practica_tema2/PNG-cards-1.3/{$nombreValor1}_{$palo1}.png' alt='{$nombreValor1} de {$palo1}' />";
 echo "<h3>Segunda carta:</h3>";
-echo "<img src='/DES/unidad2/practica_tema2/PNG-cards-1.3/{$nombreValor2}_{$palo2}.png' alt='{$nombreValor2} de {$palo2}' />";
+echo "<img src='/DEWESE-2-DAW/unidad2/practica_tema2/PNG-cards-1.3/{$nombreValor2}_{$palo2}.png' alt='{$nombreValor2} de {$palo2}' />";
 
 // Comprobar si las cartas son una pareja
 if ($valor1 == $valor2) {
