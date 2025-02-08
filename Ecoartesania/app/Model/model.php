@@ -168,7 +168,17 @@ class Model
             return false;
         }
     }
-
+    public function modificar($datos)
+    {
+        $sql = "UPDATE $this->table SET nombre = :nombre, descripcion = :descripcion, precio = :precio, imagen = :imagen WHERE idproducto = :id";
+        $stmt = $this->con->prepare($sql);
+        $stmt->bindParam(':id', $datos['id'], PDO::PARAM_INT);
+        $stmt->bindParam(':nombre', $datos['nombre'], PDO::PARAM_STR);
+        $stmt->bindParam(':descripcion', $datos['descripcion'], PDO::PARAM_STR);
+        $stmt->bindParam(':precio', $datos['precio'], PDO::PARAM_STR);
+        $stmt->bindParam(':imagen', $datos['imagen'], PDO::PARAM_STR);
+        $stmt->execute();
+    }
 /*
     function modificarTodo($producto)
     {

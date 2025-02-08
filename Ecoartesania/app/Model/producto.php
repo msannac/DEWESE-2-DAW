@@ -13,28 +13,7 @@ class Producto extends Model
         $this->table = "producto";
     }
 
-    public function insertar($datos)
-    {
-        $sql = "INSERT INTO $this->table (nombre, descripcion, precio, imagen) VALUES (:nombre, :descripcion, :precio, :imagen)";
-        $stmt = $this->con->prepare($sql);
-        $stmt->bindParam(':nombre', $datos['nombre'], PDO::PARAM_STR);
-        $stmt->bindParam(':descripcion', $datos['descripcion'], PDO::PARAM_STR);
-        $stmt->bindParam(':precio', $datos['precio'], PDO::PARAM_STR);
-        $stmt->bindParam(':imagen', $datos['imagen'], PDO::PARAM_STR);
-        $stmt->execute();
-    }
-
-    public function modificar($datos)
-    {
-        $sql = "UPDATE $this->table SET nombre = :nombre, descripcion = :descripcion, precio = :precio, imagen = :imagen WHERE idproducto = :id";
-        $stmt = $this->con->prepare($sql);
-        $stmt->bindParam(':id', $datos['id'], PDO::PARAM_INT);
-        $stmt->bindParam(':nombre', $datos['nombre'], PDO::PARAM_STR);
-        $stmt->bindParam(':descripcion', $datos['descripcion'], PDO::PARAM_STR);
-        $stmt->bindParam(':precio', $datos['precio'], PDO::PARAM_STR);
-        $stmt->bindParam(':imagen', $datos['imagen'], PDO::PARAM_STR);
-        $stmt->execute();
-    }
+   
 
     public function obtenerProductos($pagina)
     {
@@ -51,17 +30,4 @@ class Producto extends Model
         }
     }
 
-    public function cargar($id)
-    {
-        try {
-            $sql = "SELECT idproducto, nombre, descripcion, precio, imagen FROM producto WHERE idproducto = :id";
-            $stmt = $this->con->prepare($sql);
-            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-            $stmt->execute();
-            return $stmt->fetch(PDO::FETCH_ASSOC);
-        } catch (PDOException $e) {
-            echo 'Hubo un problema al cargar el producto: ' . $e->getMessage();
-            return null;
-        }
-    }
 }
