@@ -74,6 +74,31 @@ class EntrenadorController
        Utils::redirect('/');
     }
 
+    public function mostrarModificarEntrenador($datos)
+    {
+        $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
+
+        $con = Utils::getConnection();
+        $entrenadorM = new Entrenador($con);
+        $entrenador = $entrenadorM->cargar($datos['id']);
+        $datos = compact("entrenador", "pagina");
+
+        Utils::render('modificar', $datos);
+    }
+
+    public function modificarEntrenador($datos)
+    {
+        $id = $datos['id'];
+        $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
+        $entrenador = $_POST;
+
+        $con = Utils::getConnection();
+        $entrenadorM = new Entrenador($con);
+        $entrenadorM->modificar($id, $entrenador);
+
+        Utils::redirect("/?pagina=$pagina");
+    }
+
 }
 
 

@@ -2,6 +2,9 @@
 namespace App\Model;
 
 use App\Model\Model;
+use PDOException;
+use App\utils\Utils;
+use PDO;
 /*
 funcion insertar($con, $entrenador)
 funcion borrar($con, $idEntrenador)
@@ -34,6 +37,27 @@ function __construct($con)
     //Se supone que las claves del array son los nombres de los campos y los valores del array los que queremos
     //asignar
     //Debe comprobar que el id viene dado
+    function modificar($id, $datos)
+    {
+        try {
+            $campos = [];
+            foreach ($datos as $campo => $valor) {
+                $campos[] = "$campo = :$campo";
+            }
+            $sql = "UPDATE $this->table SET " . implode(', ', $campos) . " WHERE id$this->table = :id";
+            $stmt = $this->con->prepare($sql);
 
+            foreach ($datos as $campo => $valor) {
+                $tipo = Utils::obtenerTipoParametro($valor);
+                $stmt->bindValue(":$campo", $valor, $tipo);
+            }
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            echo 'Error al modificar el registro: ' . $e->getMessage();
+            return false;
+        }
+    }
 
 }

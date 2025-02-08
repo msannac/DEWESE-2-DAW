@@ -1,0 +1,15 @@
+{
+    "name": "manue/puerto-baloncesto",
+    "autoload": {
+        "psr-4": {
+            "Manue\\PuertoBaloncesto\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "msannac",
+            "email": "msannac783@g.educaand.es"
+        }
+    ],
+    "require": {}
+}

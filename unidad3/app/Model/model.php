@@ -169,9 +169,11 @@ class Model
             echo 'Hubo un problema al insertar el registro: ' . $e->getMessage();
             return false;
         }
+        
+      
     }
 
-/*
+    /*
     function modificarTodo($entrenador)
     {
         try {

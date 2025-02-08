@@ -32,7 +32,7 @@
                 <td><?= $entrenador['altura']?> cm</td>
                 <td>
                     <a href="/entrenadores/<?= $entrenador['idEntrenador'] ?>" class="btn btn-info btn-sm">Ver</a>
-                    <a href="/entrenadores/<?= $entrenador['idEntrenador'] ?>/editar" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="/entrenadores/<?= $entrenador['idEntrenador'] ?>/modificar" class="btn btn-warning btn-sm">Editar</a>
                     <a href="/entrenadores/<?= $entrenador['idEntrenador'] ?>/eliminar" class="btn btn-danger btn-sm">Eliminar</a>
                 </td>
             </tr>

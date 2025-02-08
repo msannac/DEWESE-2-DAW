@@ -1,10 +1,12 @@
 <?php 
 //Importamos el código con la clase entrenador
-require_once('./model/entrenador.php');
-require_once('./model/equipo.php');
+//require_once('unidad3\app\Model\entrenador.php');
+//require_once('./model/equipo.php');
+require_once(__DIR__ . '/app/Model/entrenador.php');
+require_once(__DIR__ . '/model/equipo.php');
 
-use model\Entrenador;
-use model\Equipo;
+use App\Model\Entrenador;
+use App\Model\Equipo;
 
 echo "La base de datos que utilizamos es: ". Entrenador::$nombreBD. "<br>";
 

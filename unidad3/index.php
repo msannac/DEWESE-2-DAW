@@ -44,6 +44,8 @@ $r->addRoute('GET', '/entrenadores/{id:\d+}', ['App\Controlador\EntrenadorContro
 $r->addRoute('GET','/entrenadores/crear',['App\Controlador\EntrenadorController', 'crearEntrenador']);
 $r->addRoute('POST','/entrenadores/crear',['App\Controlador\EntrenadorController', 'insertarEntrenador']);
 $r->addRoute('GET','/entrenadores/{id:\d+}/eliminar',['App\Controlador\EntrenadorController', 'eliminarEntrenador']);
+$r->addRoute('POST', '/entrenadores/{id:\d+}/modificar', ['App\Controlador\EntrenadorController', 'modificarEntrenador']);
+$r->addRoute('GET', '/entrenadores/{id:\d+}/modificar', ['App\Controlador\EntrenadorController', 'mostrarModificarEntrenador']);
 
 });
 
